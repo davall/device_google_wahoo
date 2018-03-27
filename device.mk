@@ -100,7 +100,9 @@ AB_OTA_UPDATER := true
 
 AB_OTA_PARTITIONS += \
     system \
-    boot
+    boot \
+    vbmeta \
+    dtbo
 
 # A/B OTA dexopt update_engine hookup
 AB_OTA_POSTINSTALL_CONFIG += \

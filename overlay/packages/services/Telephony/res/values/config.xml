@@ -19,4 +19,6 @@
 <resources>
     <!-- Allow handover from telephony calls to another ConnectionService. -->
     <bool name="config_support_handover_from">true</bool>
+    <!-- Flag to enable VVM3 visual voicemail. VVM3 is used by Verizon Wireless. -->
+    <bool name="vvm3_enabled">true</bool>
 </resources>

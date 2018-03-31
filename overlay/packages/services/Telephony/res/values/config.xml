@@ -19,4 +19,10 @@
 <resources>
     <!-- Allow handover from telephony calls to another ConnectionService. -->
     <bool name="config_support_handover_from">true</bool>
+
+    <!-- Show enabled lte option for lte device -->
+    <bool name="config_enabled_lte" translatable="false">true</bool>
+
+    <!-- Flag to enable VVM3 visual voicemail. VVM3 is used by Verizon Wireless. -->
+    <bool name="vvm3_enabled">true</bool>
 </resources>

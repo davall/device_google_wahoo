@@ -48,6 +48,7 @@ BOARD_RAMDISK_OFFSET     := 0x02000000
 endif
 
 TARGET_NO_BOOTLOADER ?= true
+TARGET_NO_KERNEL ?= false
 TARGET_NO_RECOVERY := true
 BOARD_USES_RECOVERY_AS_BOOT := true
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
@@ -68,6 +69,7 @@ BOARD_PERSISTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # DTBO partition definitions
+TARGET_NEEDS_DTBOIMAGE := true
 BOARD_DTBOIMG_PARTITION_SIZE := 8388608
 
 TARGET_COPY_OUT_VENDOR := vendor
@@ -83,13 +85,10 @@ BOARD_USES_SYSTEM_OTHER_ODEX := true
 
 BOARD_ROOT_EXTRA_FOLDERS := persist firmware metadata
 
-ifeq ($(filter-out wahoo, muskie $(TARGET_PRODUCT)),)
 BOARD_SEPOLICY_DIRS += device/google/wahoo/sepolicy/vendor
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR := device/google/wahoo/sepolicy/public
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR := device/google/wahoo/sepolicy/private
 BOARD_SEPOLICY_DIRS += device/google/wahoo/sepolicy/verizon
-BOARD_SEPOLICY_DIRS += device/google/taimen/sepolicy
-endif
 
 TARGET_ANDROID_FILESYSTEM_CONFIG_H := device/google/wahoo/android_filesystem_config.h
 

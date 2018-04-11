@@ -29,8 +29,8 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a73
 
 ifeq ($(TARGET_DEVICE),wahoo)
-BOARD_KERNEL_CMDLINE += androidboot.hardware=$(TARGET_BOOTLOADER_BOARD_NAME) androidboot.console=ttyMSM0,115200,n8
 #BOARD_KERNEL_CMDLINE += earlycon=msm_serial_dm,0xc1b0000 enforcing=0 androidboot.selinux=permissive lpm_levels.sleep_disabled=1
+BOARD_KERNEL_CMDLINE += androidboot.hardware=$(TARGET_BOOTLOADER_BOARD_NAME) androidboot.console=ttyMSM0,115200,n8
 BOARD_KERNEL_CMDLINE += earlycon=msm_serial_dm,0xc1b0000 lpm_levels.sleep_disabled=1
 BOARD_KERNEL_CMDLINE += user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 service_locator.enable=1
 BOARD_KERNEL_CMDLINE += swiotlb=2048 firmware_class.path=/vendor/firmware loop.max_part=7 raid=noautodetect
